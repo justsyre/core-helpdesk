@@ -1,0 +1,48 @@
+directories:
+  "app/controllers":
+    InstanceVariableAssumption:
+      enabled: false
+    NestedIterators:
+      max_allowed_nesting: 2
+    UtilityFunction:
+      public_methods_only: true
+  "app/mailers":
+    InstanceVariableAssumption:
+      enabled: false
+  "app/models":
+    InstanceVariableAssumption:
+      enabled: false
+exclude_paths:
+  - db
+
+detectors:
+  DuplicateMethodCall:
+    max_calls: 2
+
+  FeatureEnvy:
+    enabled: false
+
+  IrresponsibleModule:
+    enabled: false
+
+  TooManyConstants:
+    enabled: false
+
+  LongParameterList:
+    max_params: 5
+
+  TooManyInstanceVariables:
+    enabled: false
+
+  TooManyMethods:
+    enabled: false
+
+  TooManyStatements:
+    max_statements: 8
+
+  UncommunicativeParameterName:
+    accept:
+      - e
+
+  UtilityFunction:
+    public_methods_only: true
