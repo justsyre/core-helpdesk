@@ -1,0 +1,103 @@
+inherit_from:
+  - ".rubocop-performance.yml"
+  - ".rubocop-rails.yml"
+
+require:
+  - rubocop-performance
+  - rubocop-rails
+
+AllCops:
+  TargetRubyVersion: 3.1.2
+  Exclude:
+    - "db/migrate/*"
+    - "db/schema.rb"
+    - "node_modules/**/*"
+    - "vendor/**/*"
+    - "bin/*"
+
+Layout/BlockAlignment:
+  Enabled: false
+
+Layout/CaseIndentation:
+  EnforcedStyle: end
+
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: start_of_line
+
+Layout/LineLength:
+  Enabled: false
+
+Layout/SpaceAroundEqualsInParameterDefault:
+  EnforcedStyle: no_space
+
+# Lint
+
+Lint/ConstantDefinitionInBlock:
+  Enabled: false
+
+Lint/FloatComparison:
+  Enabled: false
+
+Lint/MissingSuper:
+  Enabled: false
+
+Lint/UselessMethodDefinition:
+  Enabled: false
+
+# Metrics
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockLength:
+  Max: 250
+  Exclude:
+    - "config/routes.rb" # [ma-0] This is temporary until
+
+Metrics/ClassLength:
+  Max: 150
+
+Metrics/MethodLength:
+  Max: 30
+
+Metrics/ParameterLists:
+  CountKeywordArgs: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+# Naming
+
+Naming/VariableNumber:
+  Enabled: false
+
+# Style
+
+Style/Documentation:
+  Enabled: false
+
+Style/FormatStringToken:
+  EnforcedStyle: template
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never
+
+Style/HashSyntax:
+  EnforcedStyle: ruby19
+
+Style/OptionalBooleanParameter:
+  Enabled: false
+
+Style/PreferredHashMethods:
+  EnforcedStyle: verbose
+
+Style/SingleArgumentDig:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+# Rails
+
+Rails/HttpStatus:
+  EnforcedStyle: symbolic
