@@ -52,6 +52,7 @@ group :development, :test do
   gem "faker"
   gem "rspec-rails"
   # Linters
+  gem "reek"
   gem "rubocop", require: false
   gem "rubocop-performance", require: false
   gem "rubocop-rails", require: false
